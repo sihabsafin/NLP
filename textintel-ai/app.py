@@ -6,22 +6,15 @@ from io import BytesIO
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 from spacy.matcher import Matcher
-from spacy.cli import download
 
 # ============================
-# LOAD MODEL (CLOUD SAFE + FAST UX)
+# LOAD MODEL (STREAMLIT SAFE)
 # ============================
-@st.cache_resource(show_spinner=False)
+@st.cache_resource
 def load_model():
-    try:
-        return spacy.load("en_core_web_sm")
-    except OSError:
-        download("en_core_web_sm")
-        return spacy.load("en_core_web_sm")
+    return spacy.load("en_core_web_sm")
 
-# 👇 SHOW PROGRESS IN UI (NO BLANK SCREEN)
-with st.spinner("🔄 Loading NLP model (first launch may take ~1–2 minutes)..."):
-    nlp = load_model()
+nlp = load_model()
 
 # ============================
 # PAGE CONFIG
@@ -33,20 +26,13 @@ st.set_page_config(
 )
 
 # ============================
-# PREMIUM UI STYLE (UNCHANGED)
+# PREMIUM UI STYLE
 # ============================
 st.markdown("""
 <style>
-body {
-    background-color: #0e1117;
-}
-.block-container {
-    padding-top: 2rem;
-    max-width: 900px;
-}
-h1, h2, h3 {
-    color: #ffffff;
-}
+body { background-color: #0e1117; }
+.block-container { padding-top: 2rem; max-width: 900px; }
+h1, h2, h3 { color: #ffffff; }
 .card {
     background: #161b22;
     padding: 1.5rem;
@@ -163,7 +149,7 @@ text = st.text_area(
 st.markdown("</div>", unsafe_allow_html=True)
 
 # ============================
-# ANALYSIS (UNCHANGED)
+# ANALYSIS
 # ============================
 if st.button("🚀 Analyze Text", use_container_width=True):
     if not text.strip():
@@ -194,7 +180,6 @@ if st.button("🚀 Analyze Text", use_container_width=True):
         }
         st.session_state.history.append(result)
 
-        # RESULTS UI (UNCHANGED)
         st.markdown("<div class='card'>", unsafe_allow_html=True)
         st.subheader("📊 Sentiment")
         st.success(f"{sentiment} ({confidence}%)")
@@ -236,16 +221,17 @@ if st.button("🚀 Analyze Text", use_container_width=True):
                 use_container_width=True
             )
         with col2:
+            pdf = generate_pdf(result)
             st.download_button(
                 "📄 Download PDF",
-                generate_pdf(result),
+                pdf,
                 "analysis.pdf",
                 "application/pdf",
                 use_container_width=True
             )
 
 # ============================
-# HISTORY (UNCHANGED)
+# HISTORY
 # ============================
 if st.session_state.history:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
