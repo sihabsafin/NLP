@@ -3,7 +3,7 @@
 A production-ready **Natural Language Processing (NLP) web application** that analyzes raw text to extract sentiment, keywords, and named entities — complete with confidence scoring, keyword highlighting, downloadable reports, and live deployment.
 
 🚀 **Live Demo:**  
-https://sihabsafin-nltk-text-intelligence.streamlit.app/
+https://safin-nltk-text-intelligence.streamlit.app/
 
 ---
 
