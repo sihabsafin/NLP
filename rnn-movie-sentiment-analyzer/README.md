@@ -1,4 +1,4 @@
-🎬 AI Movie Sentiment Analyzer
+## 🎬 AI Movie Sentiment Analyzer
 
 End-to-End NLP Project using Simple RNN & Word Embeddings
 
