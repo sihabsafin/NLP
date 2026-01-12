@@ -144,7 +144,7 @@ No retraining required
 This reflects a real-world ML lifecycle challenge and its practical resolution.
 
 ## 📁 Repository Structure
-
+``bash
 simple-rnn-imdb-sentiment/
 │
 ├── app.py                   # Streamlit application
