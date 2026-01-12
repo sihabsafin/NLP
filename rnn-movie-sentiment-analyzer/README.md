@@ -2,7 +2,7 @@
 
 End-to-End NLP Project using Simple RNN & Word Embeddings
 
-📌 Project Overview
+## 📌 Project Overview
 
 This project is an end-to-end Natural Language Processing (NLP) application that analyzes the sentiment of movie reviews using a Simple Recurrent Neural Network (RNN) with word embeddings, and deploys the trained model as a production-ready Streamlit web application.
 
@@ -10,7 +10,7 @@ The goal of this project was not only to train a neural network, but to take a d
 
 👉 Live App: https://rnn-movie-sentiment-analyzer.streamlit.app/
 
-🎯 Problem Statement
+## 🎯 Problem Statement
 
 Movie reviews are unstructured text data.
 The task is to determine whether a given review expresses a positive, negative, or uncertain sentiment.
@@ -25,7 +25,7 @@ Handling real-world deployment issues with legacy models
 
 Presenting model predictions in a clear, interpretable, and user-friendly way
 
-🧠 Model & Approach
+## 🧠 Model & Approach
 🔹 Dataset
 
 IMDB Movie Reviews Dataset
@@ -34,7 +34,7 @@ Binary sentiment labels (positive / negative)
 
 Vocabulary size limited for efficient embedding learning
 
-🔹 Model Architecture
+## 🔹 Model Architecture
 
 Embedding Layer – converts word indices into dense vector representations
 
@@ -44,7 +44,7 @@ Dense Output Layer (Sigmoid) – outputs sentiment probability
 
 This model was intentionally kept simple and interpretable to focus on understanding the full NLP pipeline rather than chasing benchmark scores.
 
-🔄 Text Processing Pipeline
+## 🔄 Text Processing Pipeline
 
 The application follows the same preprocessing steps used during training:
 
@@ -60,11 +60,11 @@ Feed the processed sequence into the RNN model
 
 A dedicated “See how text is processed” section in the UI explains this pipeline for transparency.
 
-🌐 Web Application Features
+## 🌐 Web Application Features
 
 This project goes beyond a basic demo and focuses on real product-style features:
 
-✅ Core Features
+##  Core Features
 
 Clean text input with live character count
 
@@ -90,7 +90,7 @@ Animated confidence progress bar
 
 Responsive layout (desktop-friendly)
 
-🔍 Interpretability
+## 🔍 Interpretability
 
 Lightweight sentence-level insights (rule-based keyword detection)
 
@@ -98,7 +98,7 @@ Explicit model limitation notice:
 
 Simple RNN may struggle with negation and long sentences
 
-🧾 Practical Features
+## 🧾 Practical Features
 
 Download prediction result as CSV
 
@@ -106,7 +106,7 @@ Session-based prediction history
 
 Timestamped results
 
-⚠️ Model Limitations (Important)
+## ⚠️ Model Limitations (Important)
 
 This project intentionally highlights limitations instead of hiding them:
 
@@ -118,7 +118,7 @@ No attention mechanism or transformer architecture is used
 
 These limitations are explicitly communicated in the UI, reflecting a professional and honest ML mindset.
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Python
 
@@ -130,7 +130,7 @@ NumPy & Pandas
 
 IMDB Dataset
 
-🚀 Deployment Notes
+##  Deployment Notes
 
 During deployment, the original legacy .h5 model format caused compatibility issues with modern Keras runtimes.
 To solve this, the model architecture was reconstructed and migrated into the modern .keras format, ensuring:
@@ -143,7 +143,7 @@ No retraining required
 
 This reflects a real-world ML lifecycle challenge and its practical resolution.
 
-📁 Repository Structure
+## 📁 Repository Structure
 
 simple-rnn-imdb-sentiment/
 │
