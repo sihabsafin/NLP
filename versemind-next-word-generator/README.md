@@ -1,4 +1,4 @@
-# 🎭 LSTM Next-Word Text Generator (Shakespeare Style)
+# 🎭 VerseMind — LSTM-Powered Next-Word Language Generator
 
 An end-to-end NLP project that uses a **Simple LSTM neural network with word embeddings**
 to predict and generate the next word in a text sequence.
@@ -10,7 +10,6 @@ The model is trained on Shakespeare’s *Hamlet* and deployed as an interactive
 
 ## 🚀 Live Demo
 👉 Deployed on Streamlit Cloud  
-(Share your app link here)
 
 ---
 
