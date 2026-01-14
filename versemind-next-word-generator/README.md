@@ -6,7 +6,7 @@ to predict and generate the next word in a text sequence.
 The model is trained on Shakespeare’s *Hamlet* and deployed as an interactive
 **Streamlit web application** with a focus on usability, interpretability, and clean design.
 
----
+
 
 ## 🚀 Live Demo
 👉 Deployed on Streamlit Cloud  
