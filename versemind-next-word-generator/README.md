@@ -6,12 +6,8 @@ to predict and generate the next word in a text sequence.
 The model is trained on Shakespeare’s *Hamlet* and deployed as an interactive
 **Streamlit web application** with a focus on usability, interpretability, and clean design.
 
-
-
 ## 🚀 Live Demo
 👉 Deployed on Streamlit Cloud  
-
----
 
 ## 🧠 Project Overview
 
@@ -26,7 +22,6 @@ This project demonstrates the complete lifecycle of a deep learning NLP system:
 Rather than focusing only on model accuracy, this project emphasizes **end-to-end execution**
 and **product-style thinking**, including UI design, explainability, and deployment.
 
----
 
 ## 🧩 Model Architecture
 
@@ -36,7 +31,6 @@ and **product-style thinking**, including UI design, explainability, and deploym
 
 The model is trained using categorical cross-entropy on sliding text windows.
 
----
 
 ## ✨ Key Features
 
